@@ -1,10 +1,9 @@
 package com.fmcg.route_management.io.repository;
 
+import com.fmcg.route_management.io.entity.WarehouseType;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
-
-import com.uniquelabs.uniquedms.io.entity.WarehouseType;
 
 /**
  * Spring Data repository for the ProductCategoery entity.

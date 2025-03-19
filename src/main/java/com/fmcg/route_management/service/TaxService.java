@@ -1,8 +1,10 @@
 package com.fmcg.route_management.service;
 
+import com.fmcg.route_management.shared.dto.TaxDTO;
+
 import java.util.List;
 
-import com.uniquelabs.uniquedms.shared.dto.TaxDTO;
+
 
 public interface TaxService {
 

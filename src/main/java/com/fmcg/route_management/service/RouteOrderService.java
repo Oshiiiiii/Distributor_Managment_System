@@ -1,8 +1,8 @@
 package com.fmcg.route_management.service;
 
-import java.util.List;
+import com.fmcg.route_management.shared.dto.RouteOrderDTO;
 
-import com.uniquelabs.uniquedms.shared.dto.RouteOrderDTO;
+import java.util.List;
 
 
 public interface RouteOrderService {

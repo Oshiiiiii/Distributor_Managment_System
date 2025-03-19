@@ -1,14 +1,15 @@
 package com.fmcg.route_management.service;
 
+import com.fmcg.route_management.shared.dto.PurchaseInvoiceLinesDTO;
+
 import java.util.List;
 
-import com.uniquelabs.uniquedms.shared.dto. PurchaseInvoiceLinesDTO;
 
 public interface PurchaseInvoiceLinesService {
 
 	 PurchaseInvoiceLinesDTO save( PurchaseInvoiceLinesDTO dto);
 
-	List< PurchaseInvoiceLinesDTO> getList(int page, int limit);
+	List<PurchaseInvoiceLinesDTO> getList(int page, int limit);
 
 	 PurchaseInvoiceLinesDTO get(Long id);
 

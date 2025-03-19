@@ -1,8 +1,8 @@
 package com.fmcg.route_management.service;
 
-import java.util.List;
+import com.fmcg.route_management.shared.dto.DistributorDTO;
 
-import com.uniquelabs.uniquedms.shared.dto.DistributorDTO;
+import java.util.List;
 
 public interface DistributorService {
 

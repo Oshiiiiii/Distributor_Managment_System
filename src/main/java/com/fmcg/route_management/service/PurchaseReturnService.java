@@ -1,14 +1,15 @@
 package com.fmcg.route_management.service;
 
+import com.fmcg.route_management.shared.dto.PurchaseReturnDTO;
+
 import java.util.List;
 
-import com.uniquelabs.uniquedms.shared.dto. PurchaseReturnDTO;
 
 public interface PurchaseReturnService {
 
 	 PurchaseReturnDTO save( PurchaseReturnDTO dto);
 
-	List< PurchaseReturnDTO> getList(int page, int limit);
+	List<PurchaseReturnDTO> getList(int page, int limit);
 
 	 PurchaseReturnDTO get(Long id);
 

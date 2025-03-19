@@ -1,10 +1,9 @@
 package com.fmcg.route_management.io.repository;
 
+import com.fmcg.route_management.io.entity.Tax;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
-
-import com.uniquelabs.uniquedms.io.entity.Tax;
 
 /**
  * Spring Data repository for the Tax entity.

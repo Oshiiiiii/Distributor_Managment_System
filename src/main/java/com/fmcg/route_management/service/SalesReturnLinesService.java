@@ -1,9 +1,8 @@
 package com.fmcg.route_management.service;
 
+import com.fmcg.route_management.shared.dto.SalesReturnLinesDTO;
+
 import java.util.List;
-
-import com.uniquelabs.uniquedms.shared.dto.SalesReturnLinesDTO;
-
 
 
 public interface SalesReturnLinesService {

@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import com.fmcg.route_management.exceptions.ResourceAlreadyExistsException;
+import com.fmcg.route_management.exceptions.ResourceNotFoundException;
+import com.fmcg.route_management.io.entity.Distributor;
+import com.fmcg.route_management.io.repository.DistributorRepository;
+import com.fmcg.route_management.service.DistributorService;
+import com.fmcg.route_management.shared.dto.DistributorDTO;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -12,12 +18,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.uniquelabs.uniquedms.exceptions.ResourceAlreadyExistsException;
-import com.uniquelabs.uniquedms.exceptions.ResourceNotFoundException;
-import com.uniquelabs.uniquedms.io.entity.Distributor;
-import com.uniquelabs.uniquedms.io.repository.DistributorRepository;
-import com.uniquelabs.uniquedms.service.DistributorService;
-import com.uniquelabs.uniquedms.shared.dto.DistributorDTO;
+
 
 
 

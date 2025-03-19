@@ -6,20 +6,18 @@ import java.util.Optional;
 
 import javax.transaction.Transactional;
 
+import com.fmcg.route_management.exceptions.ResourceAlreadyExistsException;
+import com.fmcg.route_management.exceptions.ResourceNotFoundException;
+import com.fmcg.route_management.io.entity.SalesPerson;
+import com.fmcg.route_management.io.repository.SalesPersonRepository;
+import com.fmcg.route_management.service.SalesPersonService;
+import com.fmcg.route_management.shared.dto.SalesPersonDTO;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import com.uniquelabs.uniquedms.exceptions.ResourceAlreadyExistsException;
-import com.uniquelabs.uniquedms.exceptions.ResourceNotFoundException;
-import com.uniquelabs.uniquedms.io.entity.SalesPerson;
-import com.uniquelabs.uniquedms.io.repository.SalesPersonRepository;
-import com.uniquelabs.uniquedms.service.SalesPersonService;
-import com.uniquelabs.uniquedms.shared.dto.SalesPersonDTO;
-
 
 
 @Service
