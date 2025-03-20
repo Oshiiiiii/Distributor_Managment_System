@@ -2,8 +2,8 @@ package com.fmcg.route_management.io.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import javax.persistence.*;
-import javax.validation.constraints.*;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 
 import java.io.Serializable;
 import java.util.HashSet;
@@ -40,7 +40,11 @@ public class SalesPerson implements Serializable {
     @OneToMany(mappedBy = "SalesPerson")
     private Set<Retailer> retailer = new HashSet<>();
 
-    @OneToMany(mappedBy = "SalesPerson")
+//    @OneToMany(mappedBy = "SalesPerson")
+//    private Set<SalesOrder> salesOrder = new HashSet<>();
+
+    @OneToMany(mappedBy = "salesPerson", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonIgnoreProperties(value = "salesPerson", allowSetters = true)
     private Set<SalesOrder> salesOrder = new HashSet<>();
 
     @ManyToOne

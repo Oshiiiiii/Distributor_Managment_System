@@ -4,8 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import javax.transaction.Transactional;
+import jakarta.transaction.Transactional;
 
+import com.fmcg.route_management.exceptions.ResourceAlreadyExistsException;
+import com.fmcg.route_management.exceptions.ResourceNotFoundException;
+import com.fmcg.route_management.io.entity.UserType;
+import com.fmcg.route_management.io.repository.UserTypeRepository;
+import com.fmcg.route_management.service.UserTypeService;
+import com.fmcg.route_management.shared.dto.UserTypeDTO;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -13,12 +19,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.uniquelabs.uniquedms.exceptions.ResourceAlreadyExistsException;
-import com.uniquelabs.uniquedms.exceptions.ResourceNotFoundException;
-import com.uniquelabs.uniquedms.io.entity.UserType;
-import com.uniquelabs.uniquedms.io.repository.UserTypeRepository;
-import com.uniquelabs.uniquedms.service.UserTypeService;
-import com.uniquelabs.uniquedms.shared.dto.UserTypeDTO;
+
 
 
 

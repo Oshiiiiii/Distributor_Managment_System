@@ -2,7 +2,7 @@ package com.fmcg.route_management.ui.model.request;
 
 import java.io.Serializable;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 /**
  * A DTO for the {@link com.unique.dms.domain.ProductCategoery} entity.

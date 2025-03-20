@@ -3,6 +3,14 @@ package com.fmcg.route_management.ui.contorller;
 import java.lang.reflect.Type;
 import java.util.List;
 
+import com.fmcg.route_management.io.entity.SalesInvoiceLines;
+import com.fmcg.route_management.service.SalesInvoiceLinesService;
+import com.fmcg.route_management.shared.dto.SalesInvoiceLinesDTO;
+import com.fmcg.route_management.ui.model.request.SalesInvoiceLinesRequest;
+import com.fmcg.route_management.ui.model.response.OperationStatusModel;
+import com.fmcg.route_management.ui.model.response.RequestOperationName;
+import com.fmcg.route_management.ui.model.response.RequestOperationStatus;
+import com.fmcg.route_management.ui.model.response.SalesInvoiceLinesRest;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,17 +24,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.uniquelabs.uniquedms.io.entity.SalesInvoiceLines;
-import com.uniquelabs.uniquedms.service.SalesInvoiceLinesService;
-import com.uniquelabs.uniquedms.shared.dto.SalesInvoiceLinesDTO;
-import com.uniquelabs.uniquedms.ui.model.request.SalesInvoiceLinesRequest;
-import com.uniquelabs.uniquedms.ui.model.response.OperationStatusModel;
-import com.uniquelabs.uniquedms.ui.model.response.RequestOperationName;
-import com.uniquelabs.uniquedms.ui.model.response.RequestOperationStatus;
-import com.uniquelabs.uniquedms.ui.model.response.SalesInvoiceLinesRest;
-
-
 
 @RestController
 @RequestMapping("/SalesInvoiceLines")
@@ -56,7 +53,7 @@ public class SalesInvoiceLinesController {
 
 	@GetMapping(produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
 	public List<SalesInvoiceLines> getTax(@RequestParam(value = "page", defaultValue = "0") int page,
-			@RequestParam(value = "limit", defaultValue = "2") int limit) {
+										  @RequestParam(value = "limit", defaultValue = "2") int limit) {
 
 		List<SalesInvoiceLinesDTO> dtoList = service.getList(page, limit);
 

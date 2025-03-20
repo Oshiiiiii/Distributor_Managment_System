@@ -1,10 +1,8 @@
 package com.fmcg.route_management.io.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-import javax.persistence.*;
-import javax.validation.constraints.*;
-
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -57,7 +55,8 @@ public class SalesOrder implements Serializable {
     @JoinColumn(unique = true)
     private SalesInvoice salesInvoice;
 
-    @OneToMany(mappedBy = "SalesOrder")
+    // Corrected mappedBy attribute here:
+    @OneToMany(mappedBy = "salesOrder")
     private Set<SalesOrderLines> salesOrderLines = new HashSet<>();
 
     @ManyToOne
@@ -65,9 +64,10 @@ public class SalesOrder implements Serializable {
     private Retailer retailer;
 
     @ManyToOne
-    @JsonIgnoreProperties(value = "SalesOrders", allowSetters = true)
+    @JsonIgnoreProperties(value = "salesOrder", allowSetters = true)
     private SalesPerson salesPerson;
 
+    // Getters and Setters
 
     public Long getId() {
         return id;
@@ -231,7 +231,7 @@ public class SalesOrder implements Serializable {
     public void setSalesPerson(SalesPerson salesPerson) {
         this.salesPerson = salesPerson;
     }
-    
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -248,18 +248,17 @@ public class SalesOrder implements Serializable {
         return 31;
     }
 
-    // prettier-ignore
     @Override
     public String toString() {
         return "SalesOrder{" +
-            "id=" + getId() +
-            ", soNumber='" + getSoNumber() + "'" +
-            ", soDate='" + getSoDate() + "'" +
-            ", deliveryDate='" + getDeliveryDate() + "'" +
-            ", totalValueExluded=" + getTotalValueExluded() +
-            ", totalValueIncluded=" + getTotalValueIncluded() +
-            ", remarks='" + getRemarks() + "'" +
-            ", status='" + getStatus() + "'" +
-            "}";
+                "id=" + getId() +
+                ", soNumber='" + getSoNumber() + "'" +
+                ", soDate='" + getSoDate() + "'" +
+                ", deliveryDate='" + getDeliveryDate() + "'" +
+                ", totalValueExluded=" + getTotalValueExluded() +
+                ", totalValueIncluded=" + getTotalValueIncluded() +
+                ", remarks='" + getRemarks() + "'" +
+                ", status='" + getStatus() + "'" +
+                "}";
     }
 }

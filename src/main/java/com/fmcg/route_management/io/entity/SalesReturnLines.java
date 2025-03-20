@@ -2,7 +2,7 @@ package com.fmcg.route_management.io.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 import java.io.Serializable;
 

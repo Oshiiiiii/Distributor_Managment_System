@@ -3,6 +3,14 @@ package com.fmcg.route_management.ui.contorller;
 import java.lang.reflect.Type;
 import java.util.List;
 
+import com.fmcg.route_management.io.entity.SalesOrderLines;
+import com.fmcg.route_management.service.SalesOrderLinesService;
+import com.fmcg.route_management.shared.dto.SalesOrderLinesDTO;
+import com.fmcg.route_management.ui.model.request.SalesOrderLinesRequest;
+import com.fmcg.route_management.ui.model.response.OperationStatusModel;
+import com.fmcg.route_management.ui.model.response.RequestOperationName;
+import com.fmcg.route_management.ui.model.response.RequestOperationStatus;
+import com.fmcg.route_management.ui.model.response.SalesOrderLinesRest;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,16 +24,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.uniquelabs.uniquedms.io.entity.SalesOrderLines;
-import com.uniquelabs.uniquedms.service.SalesOrderLinesService;
-import com.uniquelabs.uniquedms.shared.dto.SalesOrderLinesDTO;
-import com.uniquelabs.uniquedms.ui.model.request.SalesOrderLinesRequest;
-import com.uniquelabs.uniquedms.ui.model.response.OperationStatusModel;
-import com.uniquelabs.uniquedms.ui.model.response.RequestOperationName;
-import com.uniquelabs.uniquedms.ui.model.response.RequestOperationStatus;
-import com.uniquelabs.uniquedms.ui.model.response.SalesOrderLinesRest;
-
 
 @RestController
 @RequestMapping("/SalesOrderLines")
@@ -55,7 +53,7 @@ public class SalesOrderLinesController {
 
 	@GetMapping(produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
 	public List<SalesOrderLines> getTax(@RequestParam(value = "page", defaultValue = "0") int page,
-			@RequestParam(value = "limit", defaultValue = "2") int limit) {
+										@RequestParam(value = "limit", defaultValue = "2") int limit) {
 
 		List<SalesOrderLinesDTO> dtoList = service.getList(page, limit);
 

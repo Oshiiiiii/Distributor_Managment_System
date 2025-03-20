@@ -1,8 +1,9 @@
 package com.fmcg.route_management.service;
 
+import com.fmcg.route_management.shared.dto.UserDTO;
+
 import java.util.List;
 
-import com.uniquelabs.uniquedms.shared.dto.UserDTO;
 
 public interface UserService {
 

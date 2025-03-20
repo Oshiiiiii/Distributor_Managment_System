@@ -1,6 +1,6 @@
 package com.fmcg.route_management.shared.dto;
 
-import javax.validation.constraints.*;
+import jakarta.validation.constraints.*;
 import java.io.Serializable;
 
 

@@ -3,6 +3,13 @@ package com.fmcg.route_management.ui.contorller;
 import java.lang.reflect.Type;
 import java.util.List;
 
+import com.fmcg.route_management.service.UserTypeService;
+import com.fmcg.route_management.shared.dto.UserTypeDTO;
+import com.fmcg.route_management.ui.model.request.UserTypeRequest;
+import com.fmcg.route_management.ui.model.response.OperationStatusModel;
+import com.fmcg.route_management.ui.model.response.RequestOperationName;
+import com.fmcg.route_management.ui.model.response.RequestOperationStatus;
+import com.fmcg.route_management.ui.model.response.UserTypeRest;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,14 +23,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.uniquelabs.uniquedms.service.UserTypeService;
-import com.uniquelabs.uniquedms.shared.dto.UserTypeDTO;
-import com.uniquelabs.uniquedms.ui.model.request.UserTypeRequest;
-import com.uniquelabs.uniquedms.ui.model.response.UserTypeRest;
-import com.uniquelabs.uniquedms.ui.model.response.OperationStatusModel;
-import com.uniquelabs.uniquedms.ui.model.response.RequestOperationName;
-import com.uniquelabs.uniquedms.ui.model.response.RequestOperationStatus;
 
 @RestController
 @RequestMapping("/UserType")

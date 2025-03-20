@@ -4,9 +4,8 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 
-import javax.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 
-import com.sun.istack.NotNull;
 
 /**
  * A DTO for the {@link com.unique.dms.domain.ProductCategoery} entity.

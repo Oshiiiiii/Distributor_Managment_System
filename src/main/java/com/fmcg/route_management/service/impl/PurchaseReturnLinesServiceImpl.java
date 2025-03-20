@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import javax.transaction.Transactional;
+import jakarta.transaction.Transactional;
 
 import com.fmcg.route_management.exceptions.ResourceNotFoundException;
 import com.fmcg.route_management.io.entity.PurchaseReturnLines;

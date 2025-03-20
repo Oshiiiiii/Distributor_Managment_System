@@ -1,9 +1,8 @@
 package com.fmcg.route_management.io.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-import javax.persistence.*;
-
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import java.io.Serializable;
 
 /**
@@ -27,10 +26,11 @@ public class SalesOrderLines implements Serializable {
     private Product product;
 
     @ManyToOne
-    @JsonIgnoreProperties(value = "salesOrderLines", allowSetters = true)
+    @JsonIgnoreProperties(value = "SalesOrder", allowSetters = true)
     private SalesOrder salesOrder;
 
- 
+    // Getters and Setters
+
     public Long getId() {
         return id;
     }
@@ -77,16 +77,11 @@ public class SalesOrderLines implements Serializable {
     public void setSalesOrder(SalesOrder salesOrder) {
         this.salesOrder = salesOrder;
     }
-    
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof SalesOrderLines)) {
-            return false;
-        }
+        if (this == o) return true;
+        if (!(o instanceof SalesOrderLines)) return false;
         return id != null && id.equals(((SalesOrderLines) o).id);
     }
 
@@ -95,12 +90,11 @@ public class SalesOrderLines implements Serializable {
         return 31;
     }
 
-    // prettier-ignore
     @Override
     public String toString() {
         return "SalesOrderLines{" +
-            "id=" + getId() +
-            ", productQty=" + getProductQty() +
-            "}";
+                "id=" + getId() +
+                ", productQty=" + getProductQty() +
+                "}";
     }
 }

@@ -1,7 +1,7 @@
 package com.fmcg.route_management.io.entity;
 
-import javax.persistence.*;
-import javax.validation.constraints.*;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
